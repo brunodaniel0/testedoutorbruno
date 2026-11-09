@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b2b">
+  <meta name="description" content="Landing pages profissionais para advogados, médicos e clínicas de estética. Sites estratégicos para valorizar sua marca e transformar visitas em contatos.">
+  <title>nítida. — Landing pages que geram oportunidades</title>
+  <style>
+    :root{
+      --bg:#101b2b;--panel:#17263a;--panel2:#1d3047;--cream:#f2eee6;
+      --cream2:#eee4dc;--ink:#1c2a2c;--muted:#c4ccd5;--line:#435165;
+      --lime:#b9ed58;--green:#00c879;--gold:#d8b56c;--white:#f8fafc;
+      --radius:18px;--max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(196,204,213,.16)}
+    .brand{font-size:25px;font-weight:850;letter-spacing:-1.3px;color:var(--lime)}
+    .brand span{color:#fff}
+    nav{display:flex;gap:28px;align-items:center;font-size:13px;color:#d7dee7}
+    nav a:hover{color:var(--lime)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:12px 19px;background:var(--green);color:#06271d;font-weight:800;font-size:13px;transition:.2s}
+    .nav-cta:hover,.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .menu{display:none;background:none;border:0;color:white;font-size:25px}
+    .hero{padding:78px 0 62px;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--lime);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+    .eyebrow:before{content:"";width:22px;height:1px;background:var(--lime)}
+    h1{font-size:clamp(38px,5vw,62px);line-height:1.04;letter-spacing:-2.6px;margin:18px 0 20px;max-width:680px}
+    h1 em{font-style:normal;color:var(--lime)}
+    .hero-copy{font-size:16px;color:#c5ced8;max-width:590px;margin:0 0 25px}
+    .chips{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0 29px}
+    .chip{background:rgba(0,200,121,.13);color:var(--green);border:1px solid rgba(0,200,121,.18);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700}
+    .hero-note{font-size:11px;color:#8795a7;margin-top:14px}
+    .hero-visual{position:relative;min-height:350px;display:flex;align-items:center;justify-content:center}
+    .mockup{width:min(100%,410px);background:var(--cream);border-radius:17px;padding:13px;transform:rotate(2deg);box-shadow:0 25px 70px #0006}
+    .mock-top{height:18px;display:flex;gap:5px;align-items:center;padding-left:5px}
+    .mock-top i{width:6px;height:6px;border-radius:50%;background:#c7c1b7}
+    .mock-content{background:#e9e1d6;border-radius:10px;padding:25px 21px;color:#27343b;min-height:255px}
+    .mock-label{font-size:9px;letter-spacing:1.5px;color:#718079;font-weight:800}
+    .mock-content h3{font-family:Georgia,serif;font-size:29px;line-height:1.08;margin:14px 0}
+    .mock-content p{font-size:11px;color:#68736e;max-width:230px}
+    .mock-pill{display:inline-block;background:#1c443d;color:#fff;border-radius:30px;padding:9px 13px;font-size:9px;margin-top:9px}
+    .mock-bottom{display:flex;gap:8px;margin-top:13px}
+    .mock-bottom span{height:54px;flex:1;border-radius:7px;background:#d7cabc}
+    .floating{position:absolute;right:-4px;bottom:22px;background:var(--lime);color:#152333;padding:13px 16px;border-radius:13px;font-size:12px;font-weight:850;box-shadow:0 12px 30px #0004}
+    .section{padding:68px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:27px}
+    .kicker{color:var(--lime);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+    h2{font-size:clamp(27px,3vw,38px);letter-spacing:-1.2px;line-height:1.1;margin:8px 0 0}
+    .section-intro{max-width:440px;color:#aeb9c7;font-size:13px;margin:0}
+    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .project{border-radius:13px;overflow:hidden;min-height:225px;display:flex;flex-direction:column;justify-content:space-between;padding:19px;color:#27343b;transition:.25s}
+    .project:hover{transform:translateY(-4px)}
+    .project:nth-child(1){background:#f1eee6}
+    .project:nth-child(2){background:#1a2b41;color:#f5f6f7}
+    .project:nth-child(3){background:#efe5dc}
+    .project:nth-child(4){background:#dce8df}
+    .project:nth-child(5){background:#e9e4f1}
+    .project:nth-child(6){background:#d9e4eb}
+    .project-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;opacity:.7}
+    .project h3{font-size:21px;letter-spacing:-.5px;margin:26px 0 4px}
+    .project p{font-size:12px;margin:0;opacity:.78}
+    .project-foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px;font-size:11px;font-weight:750}
+    .arrow{width:28px;height:28px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service{background:var(--panel);border:1px solid #2b3b50;border-radius:15px;padding:22px}
+    .service-icon{width:39px;height:39px;border-radius:12px;background:rgba(185,237,88,.12);color:var(--lime);display:grid;place-items:center;font-size:18px}
+    .service h3{font-size:17px;margin:17px 0 7px}
+    .service p{font-size:12px;color:#aeb9c7;margin:0}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
+    .about-card{background:var(--panel2);border-radius:18px;padding:28px;min-height:255px;display:flex;flex-direction:column;justify-content:space-between}
+    .about-mark{font-size:54px;line-height:1;color:var(--lime);font-weight:900;letter-spacing:-4px}
+    .about-card p{font-size:12px;color:#bfcbd8;max-width:270px}
+    .about-copy p{font-size:14px;color:#b8c3d0}
+    .stats{display:flex;gap:35px;margin-top:24px;flex-wrap:wrap}
+    .stat strong{display:block;color:var(--lime);font-size:25px;letter-spacing:-1px}
+    .stat span{font-size:10px;color:#aeb9c7}
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .quote{background:var(--cream);color:#29373b;border-radius:15px;padding:22px;display:flex;flex-direction:column;min-height:230px}
+    .stars{color:#c18e36;letter-spacing:2px;font-size:13px}
+    .quote blockquote{font-family:Georgia,serif;font-size:16px;line-height:1.45;margin:16px 0 22px;flex:1}
+    .person{display:flex;align-items:center;gap:11px}
+    .person img{width:43px;height:43px;border-radius:50%;object-fit:cover;background:#d9d5ce}
+    .person strong{display:block;font-size:11px}
+    .person span{display:block;font-size:10px;color:#697575}
+    .disclaimer{font-size:10px;color:#8f9baa;margin-top:12px}
+    .cta{background:var(--lime);color:#172536;border-radius:19px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .cta h2{max-width:590px}
+    .cta p{font-size:13px;max-width:530px;margin:12px 0 0;color:#435044}
+    .cta .btn{background:#14273a;color:white;white-space:nowrap}
+    footer{padding:28px 0;color:#8f9baa;font-size:11px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:5;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#20c66a;color:white;box-shadow:0 8px 25px #0005;font-size:25px}
+    @media(max-width:800px){nav{gap:15px}.hero{grid-template-columns:1fr;padding-top:55px}.hero-visual{min-height:290px}.portfolio,.services,.testimonials{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,var(--max))}.topbar{height:66px}nav{display:none}.menu{display:block}.hero{padding:47px 0 42px;gap:20px}h1{letter-spacing:-1.8px}.hero-visual{min-height:265px}.mockup{max-width:340px}.floating{right:0;bottom:8px}.section{padding:51px 0}.portfolio,.services,.testimonials{grid-template-columns:1fr}.project{min-height:190px}.cta{padding:27px;align-items:flex-start;flex-direction:column}.cta .btn{white-space:normal;text-align:center}.stats{gap:22px}footer{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#inicio">nítida<span>.</span></a>
+    <nav aria-label="Navegação principal">
+      <a href="#portfolio">Portfólio</a><a href="#servicos">O que eu faço</a><a href="#sobre">Sobre</a><a href="#depoimentos">Depoimentos</a>
+      <a class="nav-cta" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Falar comigo ↗</a>
+    </nav>
+    <button class="menu" aria-label="Abrir menu" onclick="document.querySelector('nav').classList.toggle('mobile-open')">☰</button>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="inicio">
+      <div>
+        <div class="eyebrow">Landing pages estratégicas</div>
+        <h1>Seu negócio merece uma presença digital <em>à altura.</em></h1>
+        <p class="hero-copy">Eu crio landing pages profissionais que apresentam seu serviço com clareza, valorizam sua marca e transformam visitantes em oportunidades reais de negócio.</p>
+        <div class="chips"><span class="chip">Design personalizado</span><span class="chip">Responsivo</span><span class="chip">Foco em conversão</span></div>
+        <a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20uma%20landing%20page." target="_blank" rel="noopener">Vamos tirar seu projeto do papel <span>↗</span></a>
+        <div class="hero-note">Projetos para advogados, médicos e clínicas de estética.</div>
+      </div>
+      <div class="hero-visual" aria-label="Exemplo visual de uma landing page">
+        <div class="mockup">
+          <div class="mock-top"><i></i><i></i><i></i></div>
+          <div class="mock-content">
+            <div class="mock-label">SEU NOME • SUA MARCA</div>
+            <h3>Uma experiência que transmite confiança.</h3>
+            <p>Apresente seus diferenciais e facilite o próximo passo do seu cliente.</p>
+            <span class="mock-pill">Agende uma conversa ↗</span>
+            <div class="mock-bottom"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="floating">✦ Estratégia + design + resultado</div>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Trabalhos selecionados</div><h2>Portfólio</h2></div><p class="section-intro">Cada projeto é pensado para o público, os objetivos e o posicionamento de cada negócio.</p></div>
+        <div class="portfolio">
+          <a class="project" href="https://wa.me/5500000000000?text=Quero%20ver%20um%20projeto%20de%20Dermatologia." target="_blank" rel="noopener"><div class="project-top"><span>Saúde & estética</span><span>01 / 06</span></div><div><h3>Dermatologia</h3><p>Autoridade, cuidado e confiança em cada detalhe.</p></div><div class="project-foot"><span>Landing page • Saúde</span><span class="arrow">↗</span></div></a>
+          <a class="project" href="https://wa.me/5500000000000?text=Quero%20ver%20um%20projeto%20de%20Advocacia." target="_blank" rel="noopener"><div class="project-top"><span>Serviços jurídicos</span><span>02 / 06</span></div><div><h3>Advocacia</h3><p>Uma presença sólida para fortalecer sua credibilidade.</p></div><div class="project-foot"><span>Landing page • Jurídico</span><span class="arrow">↗</span></div></a>
+          <a class="project" href="https://wa.me/5500000000000?text=Quero%20ver%20um%20projeto%20de%20Est%C3%A9tica." target="_blank" rel="noopener"><div class="project-top"><span>Beleza & bem-estar</span><span>03 / 06</span></div><div><h3>Estética e beleza</h3><p>Apresentação comercial e agendamento simplificado.</p></div><div class="project-foot"><span>Landing page • Estética</span><span class="arrow">↗</span></div></a>
+          <a class="project" href="https://wa.me/5500000000000?text=Quero%20uma%20landing%20page%20para%20minha%20cl%C3%ADnica." target="_blank" rel="noopener"><div class="project-top"><span>Saúde especializada</span><span>04 / 06</span></div><div><h3>Clínica médica</h3><p>Serviços organizados para facilitar a escolha do paciente.</p></div><div class="project-foot"><span>Landing page • Clínicas</span><span class="arrow">↗</span></div></a>
+          <a class="project" href="https://wa.me/5500000000000?text=Quero%20uma%20p%C3%A1gina%20para%20meu%20consult%C3%B3rio." target="_blank" rel="noopener"><div class="project-top"><span>Atendimento premium</span><span>05 / 06</span></div><div><h3>Consultório</h3><p>Comunicação acolhedora com foco em conversão.</p></div><div class="project-foot"><span>Landing page • Profissionais</span><span class="arrow">↗</span></div></a>
+          <a class="project" href="https://wa.me/5500000000000?text=Quero%20conversar%20sobre%20uma%20p%C3%A1gina%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener"><div class="project-top"><span>Projeto sob medida</span><span>06 / 06</span></div><div><h3>Seu próximo projeto</h3><p>Vamos criar uma página alinhada ao seu objetivo.</p></div><div class="project-foot"><span>Seu negócio pode estar aqui</span><span class="arrow">↗</span></div></a>
+        </div>
+        <p class="disclaimer">Os cartões acima são modelos demonstrativos de segmentos e conceitos visuais, não cases publicados de clientes.</p>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Como posso ajudar</div><h2>Uma página com propósito.</h2></div><p class="section-intro">Mais do que um site bonito: uma jornada clara para seu potencial cliente entender seu valor e entrar em contato.</p></div>
+        <div class="services">
+          <article class="service"><div class="service-icon">✦</div><h3>Design profissional</h3><p>Visual personalizado, alinhado à identidade da sua marca e ao perfil do público que você quer atrair.</p></article>
+          <article class="service"><div class="service-icon">⌁</div><h3>Experiência responsiva</h3><p>Navegação fluida em celular, tablet e computador, com conteúdo organizado e fácil de encontrar.</p></article>
+          <article class="service"><div class="service-icon">↗</div><h3>Foco em conversão</h3><p>Chamadas para ação, argumentos e contato estratégico para transformar interesse em oportunidades.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="wrap about-grid">
+        <div class="about-card"><div class="about-mark">nítida.</div><p>Clareza na comunicação. Intenção no design. Estratégia em cada seção.</p><span class="kicker">Desenvolvimento de landing pages</span></div>
+        <div class="about-copy"><div class="kicker">Quem está por trás dos projetos</div><h2>Prazer, sou desenvolvedor de landing pages.</h2><p>Ajudo profissionais e empresas a apresentarem seus serviços de forma mais estratégica no digital. Meu trabalho combina estrutura, design e comunicação para que sua página passe a mensagem certa e conduza o visitante até o contato.</p><p>Meu foco está em negócios que dependem de confiança para vender: advogados, médicos, consultórios e clínicas de estética.</p><div class="stats"><div class="stat"><strong>100%</strong><span>Design pensado para sua marca</span></div><div class="stat"><strong>Mobile</strong><span>Experiência em qualquer tela</span></div><div class="stat"><strong>CTA</strong><span>Contato fácil e direto</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="depoimentos">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Experiências de clientes</div><h2>Depoimentos</h2></div><p class="section-intro">Uma boa página deve tornar a comunicação mais clara e o contato mais simples.</p></div>
+        <div class="testimonials">
+          <article class="quote"><div class="stars">★★★★★</div><blockquote>“A página deixou meus serviços muito mais organizados. Agora consigo direcionar meus contatos para um lugar profissional.”</blockquote><div class="person"><img src="https://thispersondoesnotexist.com/" alt="Retrato ilustrativo gerado por IA"><div><strong>Mariana A.</strong><span>Advogada • depoimento ilustrativo</span></div></div></article>
+          <article class="quote"><div class="stars">★★★★★</div><blockquote>“O visual transmite o cuidado que quero oferecer aos meus pacientes. Ficou muito mais fácil apresentar meu trabalho.”</blockquote><div class="person"><img src="https://thispersondoesnotexist.com/" alt="Retrato ilustrativo gerado por IA"><div><strong>Dr. Rafael M.</strong><span>Médico • depoimento ilustrativo</span></div></div></article>
+          <article class="quote"><div class="stars">★★★★★</div><blockquote>“A estrutura ficou objetiva e bonita. A pessoa entende os tratamentos e sabe exatamente como falar com a clínica.”</blockquote><div class="person"><img src="https://thispersondoesnotexist.com/" alt="Retrato ilustrativo gerado por IA"><div><strong>Camila R.</strong><span>Clínica de estética • depoimento ilustrativo</span></div></div></article>
+        </div>
+        <p class="disclaimer">Atenção: nomes, retratos e textos desta seção são exemplos fictícios para demonstração do layout. Substitua por depoimentos reais e autorizados antes de publicar.</p>
+      </div>
+    </section>
+
+    <section class="wrap section" id="contato" style="border-top:0;padding-top:12px;padding-bottom:65px">
+      <div class="cta"><div><div class="kicker" style="color:#415b2a">Seu próximo passo</div><h2>Vamos criar uma página que valorize o seu negócio?</h2><p>Me conte sobre seu serviço e seus objetivos. Vamos conversar sobre a landing page ideal para atrair e converter mais clientes.</p></div><a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20seu%20portf%C3%B3lio%20e%20quero%20uma%20landing%20page." target="_blank" rel="noopener">Conversar pelo WhatsApp ↗</a></div>
+    </section>
+  </main>
+  <footer class="wrap"><span>© <span id="year"></span> nítida. Todos os direitos reservados.</span><span>Landing pages profissionais • Design com estratégia</span></footer>
+  <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20uma%20landing%20page." target="_blank" rel="noopener" aria-label="Fale comigo pelo WhatsApp">◔</a>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menu = document.querySelector('.menu');
+    menu.addEventListener('click', () => {
+      const nav = document.querySelector('nav');
+      const opened = nav.classList.toggle('mobile-open');
+      nav.style.display = opened ? 'flex' : '';
+      if(opened){nav.style.position='absolute';nav.style.top='66px';nav.style.left='14px';nav.style.right='14px';nav.style.zIndex='10';nav.style.padding='18px';nav.style.borderRadius='14px';nav.style.background='#17263a';nav.style.flexDirection='column';nav.style.alignItems='stretch';}
+      else {nav.removeAttribute('style');}
+    });
+    document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelector('nav').removeAttribute('style');document.querySelector('nav').classList.remove('mobile-open')}));
+  </script>
+</body>
+</html>
